@@ -1,0 +1,9 @@
+<h1>Artistas Populares</h1>
+<ul>
+  <li *ngFor="let artist of artists">
+    <div (click)="goToDetail(artist)" style="cursor: pointer;">
+      <img [src]="artist.image[1]['#text']" alt="{{ artist.name }}" />
+      <span>{{ artist.name }}</span>
+    </div>
+  </li>
+</ul>
