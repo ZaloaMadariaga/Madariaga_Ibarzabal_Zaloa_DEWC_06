@@ -1,0 +1,12 @@
+
+<h2>Añadir a Favoritos</h2>
+
+
+<ul>
+  <div *ngFor="let artist of artists; let i = index">
+    <span>{{ i + 1 }}. {{ artist.name }}</span>
+    <span> - {{ artist.genre }}</span>
+
+    <button (click)="addToFavorites(artist)">Añadir</button>
+  </div>
+</ul>

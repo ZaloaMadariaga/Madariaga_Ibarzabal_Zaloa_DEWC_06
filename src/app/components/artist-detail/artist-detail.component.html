@@ -1,0 +1,30 @@
+<div *ngIf="artist">
+  <h2>{{ artist.name }}</h2>
+  <img [src]="artist.image[2]['#text']" />
+  <p [innerHTML]="artist.bio.content"></p>
+
+  <h3>Artistas similares</h3>
+  <ul>
+    <li *ngFor="let similar of artist.similar.artist">
+      {{ similar.name }}
+    </li>
+  </ul>
+
+  <div *ngIf="albums">
+    <h3>Álbumes</h3>
+    <ul>
+      <li *ngFor="let album of albums">
+        {{ album.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="tracks">
+    <h3>Canciones populares</h3>
+    <ul>
+      <li *ngFor="let track of tracks">
+        {{ track.name }}
+      </li>
+    </ul>
+  </div>
+</div>
